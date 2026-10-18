@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework JavaScript</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-gray-100 font-sans text-gray-800">
+    <main class="mx-auto max-w-5xl px-4 py-8 sm:px-6">
+      <!-- Bài 1 -->
+      <section class="mb-4 border border-gray-300 bg-white p-5">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-6">
+          <div class="md:col-span-3">
+            <h2 class="text-lg font-bold text-blue-800">Bài 1</h2>
+            <p class="mt-1 font-medium">Tính tiền lương nhân viên</p>
+            <p class="mt-2 text-sm text-gray-600">
+              Lương một ngày: 100.000 VNĐ
+            </p>
+          </div>
+
+          <div class="md:col-span-9">
+            <label for="soNgay" class="mb-2 block text-sm font-medium">
+              Số ngày làm việc
+            </label>
+
+            <input
+              type="number"
+              id="soNgay"
+              placeholder="Nhập số ngày làm việc"
+              class="w-full rounded border border-gray-300 px-3 py-2 text-sm outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+            />
+
+            <button
+              id="btnTinhLuong"
+              type="button"
+              class="mt-3 rounded bg-blue-700 px-5 py-2 text-sm text-white hover:bg-blue-800"
+            >
+              Tính lương
+            </button>
+
+            <p
+              id="result1"
+              aria-live="polite"
+              class="mt-3 empty:hidden border border-gray-200 bg-gray-50 p-3 text-sm"
+            ></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bài 2 -->
+      <section class="mb-4 border border-gray-300 bg-white p-5">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-6">
+          <div class="md:col-span-3">
+            <h2 class="text-lg font-bold text-blue-800">Bài 2</h2>
+            <p class="mt-1 font-medium">Tính giá trị trung bình</p>
+            <p class="mt-2 text-sm text-gray-600">Nhập 5 số thực.</p>
+          </div>
+
+          <div class="md:col-span-9">
+            <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <div>
+                <label for="so1" class="mb-1 block text-sm">
+                  Số thực thứ nhất
+                </label>
+                <input
+                  type="number"
+                  id="so1"
+                  step="any"
+                  placeholder="Nhập số thứ nhất"
+                  class="w-full rounded border border-gray-300 px-3 py-2 text-sm outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                />
+              </div>
+
+              <div>
+                <label for="so2" class="mb-1 block text-sm">
+                  Số thực thứ hai
+                </label>
+                <input
+                  type="number"
+                  id="so2"
+                  step="any"
+                  placeholder="Nhập số thứ hai"
+                  class="w-full rounded border border-gray-300 px-3 py-2 text-sm outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                />
+              </div>
+
+              <div>
+                <label for="so3" class="mb-1 block text-sm">
+                  Số thực thứ ba
+                </label>
+                <input
+                  type="number"
+                  id="so3"
+                  step="any"
+                  placeholder="Nhập số thứ ba"
+                  class="w-full rounded border border-gray-300 px-3 py-2 text-sm outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                />
+              </div>
+
+              <div>
+                <label for="so4" class="mb-1 block text-sm">
+                  Số thực thứ tư
+                </label>
+                <input
+                  type="number"
+                  id="so4"
+                  step="any"
+                  placeholder="Nhập số thứ tư"
+                  class="w-full rounded border border-gray-300 px-3 py-2 text-sm outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                />
+              </div>
+
+              <div class="sm:col-span-2">
+                <label for="so5" class="mb-1 block text-sm">
+                  Số thực thứ năm
+                </label>
+                <input
+                  type="number"
+                  id="so5"
+                  step="any"
+                  placeholder="Nhập số thực thứ năm"
+                  class="w-full rounded border border-gray-300 px-3 py-2 text-sm outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                />
+              </div>
+            </div>
+
+            <button
+              id="btnTinhTrungBinh"
+              type="button"
+              class="mt-3 rounded bg-blue-700 px-5 py-2 text-sm text-white hover:bg-blue-800"
+            >
+              Tính trung bình
+            </button>
+
+            <p
+              id="result2"
+              aria-live="polite"
+              class="mt-3 empty:hidden border border-gray-200 bg-gray-50 p-3 text-sm"
+            ></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bài 3 -->
+      <section class="mb-4 border border-gray-300 bg-white p-5">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-6">
+          <div class="md:col-span-3">
+            <h2 class="text-lg font-bold text-blue-800">Bài 3</h2>
+            <p class="mt-1 font-medium">Quy đổi tiền</p>
+            <p class="mt-2 text-sm text-gray-600">USD sang VNĐ.</p>
+          </div>
+
+          <div class="md:col-span-9">
+            <label for="soTienUSD" class="mb-2 block text-sm font-medium">
+              Số tiền USD
+            </label>
+
+            <input
+              type="number"
+              id="soTienUSD"
+              placeholder="Nhập số tiền USD"
+              class="w-full rounded border border-gray-300 px-3 py-2 text-sm outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+            />
+
+            <button
+              id="btnQuyDoi"
+              type="button"
+              class="mt-3 rounded bg-blue-700 px-5 py-2 text-sm text-white hover:bg-blue-800"
+            >
+              Quy đổi
+            </button>
+
+            <p
+              id="result3"
+              aria-live="polite"
+              class="mt-3 empty:hidden border border-gray-200 bg-gray-50 p-3 text-sm"
+            ></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bài 4 -->
+      <section class="mb-4 border border-gray-300 bg-white p-5">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-6">
+          <div class="md:col-span-3">
+            <h2 class="text-lg font-bold text-blue-800">Bài 4</h2>
+            <p class="mt-1 font-medium">Hình chữ nhật</p>
+            <p class="mt-2 text-sm text-gray-600">Tính diện tích và chu vi.</p>
+          </div>
+
+          <div class="md:col-span-9">
+            <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <div>
+                <label for="chieuDai" class="mb-1 block text-sm">
+                  Chiều dài
+                </label>
+                <input
+                  type="number"
+                  id="chieuDai"
+                  placeholder="Nhập chiều dài"
+                  class="w-full rounded border border-gray-300 px-3 py-2 text-sm outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                />
+              </div>
+
+              <div>
+                <label for="chieuRong" class="mb-1 block text-sm">
+                  Chiều rộng
+                </label>
+                <input
+                  type="number"
+                  id="chieuRong"
+                  placeholder="Nhập chiều rộng"
+                  class="w-full rounded border border-gray-300 px-3 py-2 text-sm outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                />
+              </div>
+            </div>
+
+            <div class="mt-3 flex flex-wrap gap-2">
+              <button
+                id="btnTinhDienTich"
+                type="button"
+                class="rounded bg-blue-700 px-5 py-2 text-sm text-white hover:bg-blue-800"
+              >
+                Tính diện tích
+              </button>
+
+              <button
+                id="btnTinhChuVi"
+                type="button"
+                class="rounded border border-blue-700 bg-white px-5 py-2 text-sm text-blue-700 hover:bg-blue-50"
+              >
+                Tính chu vi
+              </button>
+            </div>
+
+            <p
+              id="resultDienTich"
+              aria-live="polite"
+              class="mt-3 empty:hidden border border-gray-200 bg-gray-50 p-3 text-sm"
+            ></p>
+
+            <p
+              id="resultChuVi"
+              aria-live="polite"
+              class="mt-2 empty:hidden border border-gray-200 bg-gray-50 p-3 text-sm"
+            ></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Bài 5 -->
+      <section class="mb-4 border border-gray-300 bg-white p-5">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-6">
+          <div class="md:col-span-3">
+            <h2 class="text-lg font-bold text-blue-800">Bài 5</h2>
+            <p class="mt-1 font-medium">Tính tổng hai ký số</p>
+            <p class="mt-2 text-sm text-gray-600">Ví dụ: 25 = 2 + 5.</p>
+          </div>
+
+          <div class="md:col-span-9">
+            <label for="so2KySo" class="mb-2 block text-sm font-medium">
+              Số có hai chữ số
+            </label>
+
+            <input
+              type="number"
+              id="so2KySo"
+              placeholder="Nhập số có 2 chữ số"
+              class="w-full rounded border border-gray-300 px-3 py-2 text-sm outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+            />
+
+            <button
+              id="btnTinhTong"
+              type="button"
+              class="mt-3 rounded bg-blue-700 px-5 py-2 text-sm text-white hover:bg-blue-800"
+            >
+              Tính tổng
+            </button>
+
+            <p
+              id="result5"
+              aria-live="polite"
+              class="mt-3 empty:hidden border border-gray-200 bg-gray-50 p-3 text-sm"
+            ></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- File xử lý logic -->
+    <script src="Main.js"></script>
+  </body>
+</html>
